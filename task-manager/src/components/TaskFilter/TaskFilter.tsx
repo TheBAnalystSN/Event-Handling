@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from 'react';
-import { TaskFilterProps } from '../../types';
+import { type TaskFilterProps } from '../../types';
 
 const TaskFilter: React.FC<TaskFilterProps> = ({ onFilterChange }) => {
   const [status, setStatus] = useState<'all' | 'pending' | 'in-progress' | 'completed'>('all');
@@ -20,6 +21,7 @@ const TaskFilter: React.FC<TaskFilterProps> = ({ onFilterChange }) => {
         Status
         <select
           value={status}
+           
           onChange={(e) => handleChange(e.target.value as any, priority)}
           className="ml-2 px-2 py-1 border rounded"
         >
