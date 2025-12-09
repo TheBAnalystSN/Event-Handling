@@ -1,5 +1,5 @@
 import React from 'react';
-import { TaskItemProps } from '../../types';
+import { type TaskItemProps } from '../../types';
 
 const TaskItem: React.FC<TaskItemProps> = ({ task, onStatusChange, onDelete, onMove }) => {
   const due = new Date(task.dueDate);
@@ -44,6 +44,7 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, onStatusChange, onDelete, onM
           <select
             aria-label={`Change status for ${task.title}`}
             value={task.status}
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             onChange={(e) => onStatusChange(task.id, e.target.value as any)}
             className="px-2 py-1 border rounded"
           >
