@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useMemo, useState } from 'react';
-import { TaskListProps } from '../../types';
+import { type TaskListProps } from '../../types';
 import TaskItem from '../TaskItem/TaskItem';
 
 const TaskList: React.FC<TaskListProps> = ({ tasks, onStatusChange, onDelete, onMove, onAdd, onSortByDueDate }) => {
