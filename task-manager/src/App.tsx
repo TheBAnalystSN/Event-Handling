@@ -1,6 +1,7 @@
-import React, { useMemo, useState } from 'react';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useMemo, useState } from 'react';
 import './index.css';
-import { Task } from './types';
+import type { Task } from './types';
 import TaskFilter from './components/TaskFilter/TaskFilter';
 import TaskList from './components/TaskList/TaskList';
 import sampleData from './sampleData';
